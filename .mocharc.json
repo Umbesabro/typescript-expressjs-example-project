@@ -1,0 +1,11 @@
+{
+  "extension": [
+    "ts"
+  ],
+  "spec": "test/unit/**/*.spec.ts",
+  "require": "ts-node/register",
+  "recursive": true,
+  "reporter": "mocha-multi-reporters",
+  "reporter-options":"configFile=test/mocha.json"
+}
+

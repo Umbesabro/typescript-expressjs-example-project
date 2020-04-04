@@ -1,0 +1,14 @@
+{
+    "extends":"@istanbuljs/nyc-config-typescript",
+    "reporter": ["lcov","cobertura","text"],
+    "require":[
+        "ts-node/register",
+        "source-map-support/register"
+    ],
+    "all": true,
+    "clean": false,
+    "silent":false,
+    "include":"src/**/*.ts",
+    "exclude": ["src/index.ts"],
+    "report-dir":"./reports/coverage"
+  }

@@ -1,0 +1,9 @@
+.vscode
+node_modules
+dist
+reports
+xunit-custom.xml
+xunit.xml
+junit-custom.xml
+test-results.xml
+.nyc_output
