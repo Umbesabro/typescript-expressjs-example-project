@@ -1,10 +1,10 @@
 {
-    "name": "smc-backend",
+    "name": "typescript-expressjs-example",
     "version": "1.0.0",
-    "description": "Backend of SMC aplication",
+    "description": "Example backend application written in typescript",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Umbesabro/smc-backend.git"
+        "url": "https://github.com/Umbesabro/typescript-expressjs-example-project.git"
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -16,7 +16,13 @@
         "test:coverage": "nyc mocha"
     },
     "author": "Adam Drag",
-    "license": "Apache-2.0",
+    "license": "MIT",
+    "keywords": [
+        "typescript",
+        "nyc",
+        "mocha",
+        "expressjs"
+    ],
     "dependencies": {
         "express": "4.17.1",
         "custom-env": "2.0.1",

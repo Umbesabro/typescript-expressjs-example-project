@@ -46,13 +46,13 @@ export default class App {
 
     private listenHttpServer(): void {
         this.httpServer.listen(Config.instance().Port, () => {
-            console.log(`smc-backend http server is listening on port: ${Config.instance().Port}`);
+            console.log(`example http server is listening on port: ${Config.instance().Port}`);
         });
     }
 
     private listenHttpsServer(): void {
         this.httpsServer.listen(Config.instance().Port, () => {
-            console.log(`smc-backend https is listening on port: ${Config.instance().Port}`);
+            console.log(`example https is listening on port: ${Config.instance().Port}`);
         });
     }
 

@@ -71,7 +71,7 @@ export default class Config {
 
     private genertSelfSignedCertificates(): void {
         const certsDir = 'certificates';
-        const attributes = [{ name: 'commonName', value: 'smc-backend' }];
+        const attributes = [{ name: 'commonName', value: 'example-backend' }];
         const pems = selfsigned.generate(attributes, { days: 365 });
         fs.mkdirSync(certsDir, { recursive: true });
         fs.writeFileSync(this.pathToCert, pems.cert);
