@@ -1,4 +1,4 @@
-import BaseController from '../endpoint';
+import BaseController from '../base-controller';
 import ExampleController from './example-controller';
 export default class RootController extends BaseController {
     public constructor() {

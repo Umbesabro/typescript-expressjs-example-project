@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import BaseController from '../endpoint';
+import BaseController from '../base-controller';
 import ExampleService from '../../service/example.service';
 import ExampleValidator from '../validators/example-validator';
 

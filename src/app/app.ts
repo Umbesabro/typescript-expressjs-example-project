@@ -3,7 +3,7 @@ import Config from './configuration/config';
 import https from 'https';
 import http from 'http';
 import fs from 'fs';
-import BaseController from './api/endpoint';
+import BaseController from './api/base-controller';
 import bodyParser from 'body-parser';
 
 export default class App {
