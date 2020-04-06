@@ -11,6 +11,7 @@ export default class Config {
     private httpsMode: boolean;
     private pathToCert: string;
     private pathToKey: string;
+    private sampleExternalResourceUrl:string;
 
     public constructor() {
         this.init();
@@ -40,6 +41,10 @@ export default class Config {
         return this.pathToKey;
     }
 
+    public get SampleExternalResourceUrl() {
+        return this.sampleExternalResourceUrl;
+    }
+
     private init() {
         this.loadSystemVariablesFromDotEnv();
         this.assignSystemVariablesToConfigVariables();
@@ -55,6 +60,7 @@ export default class Config {
         this.pathToCert = process.env.PATH_TO_CERT;
         this.pathToKey = process.env.PATH_TO_KEY;
         this.httpsMode = process.env.HTTPS_MODE === 'true';
+        this.sampleExternalResourceUrl = process.env.SAMPLE_EXTERNAL_SOURCE_URL;
     }
 
     private loadSystemVariablesFromDotEnv() {

@@ -6,20 +6,29 @@ import ExampleValidator from '../validators/example-validator';
 export default class ExampleController extends BaseController {
     public constructor() {
         super('/example');
-        this.Router.get('/simple-get', this.simpleGet);
-        this.Router.post('/validated-post', [new ExampleValidator().validateRequest], this.validatedPost);
+        this.Router.get('/get', this.exampleGet);
+        this.Router.post('/post', [new ExampleValidator().validateExamplePostRequest], this.examplePost);
+        this.Router.get('/get-from-external-resource', [new ExampleValidator().validateExampleGetRequest], this.exampleGetFromExternalResource);
     }
 
-    public async simpleGet(req: Request, res: Response, next: NextFunction) {
+    public async exampleGet(req: Request, res: Response, next: NextFunction) {
         try {
-            const result = await new ExampleService().getExampleData();
+            res.status(200).json({ msg: 'Hello' });
+        } catch (err) {
+            next(err);
+        }
+    }
+
+    public async exampleGetFromExternalResource(req: Request, res: Response, next: NextFunction) {
+        try {
+            const result = await new ExampleService().getExampleData(req.params.id);
             res.status(200).json(result);
         } catch (err) {
             next(err);
         }
     }
 
-    public async validatedPost(req: Request, res: Response, next: NextFunction) {
+    public async examplePost(req: Request, res: Response, next: NextFunction) {
         try {
             const result = { message: `Received msg: ${req.body.msg}` };
             res.status(200).json(result);
