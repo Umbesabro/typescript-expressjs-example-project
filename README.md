@@ -10,6 +10,3 @@ curl http://localhost:8080/api/v1/example/simple-get
 
 To run tests just run: npm run test
 If you want to run tests and generate report about the code coverage run: npm run test:coverage
-
-Coming soon:
-Integration tests
