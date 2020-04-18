@@ -6,7 +6,7 @@ export default class ExampleClient {
 
     private readonly externalResourceBaseUrl: string = Config.instance().SampleExternalResourceUrl;
 
-    public getExampleData(id: string): Promise<ExampleModel> {
+    public async getExampleData(id: string): Promise<ExampleModel> {
         const options: AxiosRequestConfig = {
             url: '/example_data',
             baseURL: this.externalResourceBaseUrl,
@@ -15,6 +15,7 @@ export default class ExampleClient {
                 id: id
             }
         };
-        return axios(options);
+        const response = await axios(options);
+        return response.data;
     }
 }

@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from 'express';
 import BaseController from '../base-controller';
 import ExampleService from '../../service/example.service';
 import ExampleValidator from '../validators/example-validator';
+import { ExampleModel } from '../../model/example-model';
 
 export default class ExampleController extends BaseController {
     public constructor() {
@@ -21,7 +22,7 @@ export default class ExampleController extends BaseController {
 
     public async exampleGetFromExternalResource(req: Request, res: Response, next: NextFunction) {
         try {
-            const result = await new ExampleService().getExampleData(req.params.id);
+            const result:ExampleModel = await new ExampleService().getExampleData(req.query.id);
             res.status(200).json(result);
         } catch (err) {
             next(err);
