@@ -1,5 +1,6 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/469c25e4bb564da6bd5d80954203474a)](https://app.codacy.com/manual/adam.drag/typescript-expressjs-example-project?utm_source=github.com&utm_medium=referral&utm_content=Umbesabro/typescript-expressjs-example-project&utm_campaign=Badge_Grade_Dashboard)
+<a href="https://codeclimate.com/github/Umbesabro/typescript-expressjs-example-project/maintainability"><img src="https://api.codeclimate.com/v1/badges/b28a78b3f852344ff8a8/maintainability" /></a>
 
 This is an example backend application written in TypeScript which you can use to build your own app.
 
