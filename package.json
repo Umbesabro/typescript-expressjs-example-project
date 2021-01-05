@@ -29,7 +29,7 @@
         "fs-extra": "8.1.0",
         "selfsigned": "1.10.7",
         "body-parser": "1.19.0",
-        "axios": "0.19.2"
+        "axios": "0.21.1"
     },
     "devDependencies": {
         "@types/node": "12.12.2",
